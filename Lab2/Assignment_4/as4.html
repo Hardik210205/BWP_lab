@@ -2,84 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Assignment-4</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form>
-        <h1>Regitration Form</h1>
-        <div>
-            <label for="name">First Name : </label>
-            <input type="text" name="name">
-        </div>
+  <form>
+    <h1>Student Registration Form</h1>
 
-        <div>
-            <label for="name">Middle Name : </label>
-            <input type="text" name="name">
-        </div>
+    <div>
+      <label for="firstName">First Name: </label>
+      <input type="text" id="firstName">
+    </div>
 
-        <div>
-            <label for="name">Last Name : </label>
-            <input type="text" name="name">
-        </div>
+    <div>
+      <label for="middleName">Middle Name: </label>
+      <input type="text" id="middleName">
+    </div>
 
-        <div>
-            <label for="name">Gender : </label>
-            <input type="radio" name="name">Male
-            <input type="radio" name="name">Female
-        </div>
+    <div>
+      <label for="lastName">Last Name: </label>
+      <input type="text" id="lastName">
+    </div>
 
-        <div>
-            <label for="name">Address : </label>
-            <input type="text" name="name">
-        </div>
+    <div>
+      <label>Gender: </label>
+      <input type="radio" id="male" name="gender">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender">
+      <label for="female">Female</label>
+    </div>
 
-        <div>
-            <label for="name">Phone no. : </label>
-            <input type="number" name="name">
-        </div>
+    <div>
+      <label for="address">Address: </label><br>
+      <textarea id="address"></textarea>
+    </div>
 
-        <div>
-            <label for="name">Email id : </label>
-            <input type="email" name="name">
-        </div>
-        
-        <div>
-            <label for="name">Hobbies : </label>
-            <input type="checkbox" name="name">Cricket
-            <input type="checkbox" name="name">Football
-            <input type="checkbox" name="name">Reading Book
-        </div>
+    <div>
+      <label for="phone">Phone No.: </label>
+      <input type="tel">
+    </div>
 
-        <div>
-            <label for="name">City : </label>
-            <input type="text" name="name">
-        </div>
-        
-        <div>
-            <label for="name">State : </label>
-            <input type="text" name="name">
-        </div>
+    <div>
+      <label for="email">Email ID: </label>
+      <input type="email" >
+    </div>
 
-        <div>
-            <label for="name">Country : </label>
-            <input type="text" name="name">
-        </div>
-        
-        <div>
-            <label for="name">College Name : </label>
-            <select>
-                <option>MSUB</option>
-                <option>IITM</option>
-                <option>IITB</option>
-            </select>
-        </div>
+    <div>
+      <label>Hobbies: </label>
+      <input type="checkbox" id="cricket" name="hobbies" >
+      <label for="cricket">Cricket</label>
+      <input type="checkbox" id="football" name="hobbies" >
+      <label for="football">Football</label>
+      <input type="checkbox" id="reading" name="hobbies">
+      <label for="reading">Reading Book</label>
+    </div>
 
+    <div>
+      <label for="city">City: </label>
+      <input type="text" >
+    </div>
 
-    </form>
+    <div>
+      <label for="state">State: </label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label for="country">Country: </label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label for="college">College Name: </label>
+      <select id="college">
+        <option value="msub">MSUB</option>
+        <option value="iitm">IITM</option>
+        <option value="iitb">IITB</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 </body>
 
 </html>
