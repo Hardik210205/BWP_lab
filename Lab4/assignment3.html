@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find 'a' Occurrences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Find First and Last Occurrence of 'a'</h2>
+
+  <label for="wordInput">Enter a word:</label><br>
+  <input type="text" id="wordInput" placeholder="e.g. ajanta"><br>
+  <button onclick="findBetweenA()">Find</button>
+
+  <div id="result"></div>
+
+  <script>
+    function findBetweenA() {
+      const word = document.getElementById("wordInput").value;
+      const firstA = word.indexOf('a');
+      const lastA = word.lastIndexOf('a');
+
+      let result = "";
+
+      if (firstA === -1) {
+        result = "The letter 'a' is not present in the word.";
+      } else if (firstA === lastA) {
+        result = "Only one 'a' found at position " + (firstA + 1) + ". No characters in between.";
+      } else {
+        const between = word.substring(firstA + 1, lastA);
+        result = `First 'a' at position ${firstA + 1}<br>
+                  Last 'a' at position ${lastA + 1}<br>
+                  String between them: "${between}"`;
+      }
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typewriter Effect</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      font-size: 24px;
+      padding: 20px;
+    }
+    #typewriter {
+      border-right: 2px solid black;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="typewriter"></div>
+
+  <script>
+    var text = "Welcome to the Typewriter Effect using DHTML!";
+    var i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>
